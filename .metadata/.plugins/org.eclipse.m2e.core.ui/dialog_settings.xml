@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\beatr\Desktop\SPRING_TOOL\blogPessoal"/>
 			<item value="C:\Users\beatr\Desktop\SPRING TOOL\hello"/>
 		</list>
 		<list key="projectNameTemplate">
