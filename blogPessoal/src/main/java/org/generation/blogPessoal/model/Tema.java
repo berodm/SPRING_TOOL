@@ -27,7 +27,7 @@ public class Tema {
 	
 	@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("tema")
-	private List<Postagem> postagem;
+	private List<Postagem> postagem; //para mesclar as tabelas
 
 	public long getId() {
 		return id;
