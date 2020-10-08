@@ -44,8 +44,9 @@ public class UsuarioController {
 	}
 	
 	@PutMapping("/{id}")
-	public ResponseEntity<Usuario> put (@RequestBody Usuario usuario) {
-		return ResponseEntity.ok(repository.save(usuario));}
+	public ResponseEntity<Usuario> atualiza(@PathVariable Long id, @RequestBody Usuario usuario){
+		usuario.setId(id);
+		return ResponseEntity.status(HttpStatus.OK).body(repository.save(usuario));}
 	
 	@DeleteMapping("/{id}")
 	public void delete (@PathVariable long id) {
