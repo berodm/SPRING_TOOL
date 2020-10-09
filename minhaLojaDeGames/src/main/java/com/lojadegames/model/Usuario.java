@@ -40,12 +40,12 @@ public class Usuario {
 		this.nome = nome;
 	}
 
-	public String getMarca() {
+	public String getEmail() {
 		return email;
 	}
 
-	public void setMarca(String marca) {
-		this.email = marca;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getSenha() {

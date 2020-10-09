@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 import com.lojadegames.model.Usuario;
 import com.lojadegames.repository.UsuarioRepository;
 
@@ -43,10 +44,9 @@ public class UsuarioController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(usuario));
 	}
 	
-	@PutMapping("/{id}")
-	public ResponseEntity<Usuario> atualiza(@PathVariable Long id, @RequestBody Usuario usuario){
-		usuario.setId(id);
-		return ResponseEntity.status(HttpStatus.OK).body(repository.save(usuario));}
+	@PutMapping
+	public ResponseEntity<Usuario> put (@RequestBody Usuario usuario) {
+		return ResponseEntity.ok(repository.save(usuario));}
 	
 	@DeleteMapping("/{id}")
 	public void delete (@PathVariable long id) {
